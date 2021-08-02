@@ -163,6 +163,4 @@ MEDIA_URL = '/media/'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-# Activate Django-Heroku.
 django_heroku.settings(locals())
