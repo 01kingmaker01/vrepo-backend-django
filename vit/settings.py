@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'b%q8@oyu8@x)%l(=+rmzt0gv%4f1x*n$@ryw%=-l2^k-6%20xm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'Cluster0',
         'CLIENT': {
-                'host': 'mongodb+srv://admin:admin321@cluster0.ylbdt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+                'host': 'mongodb+srv://admin:admin321@cluster0.ylbdt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&ssl=true',
             }  
         
        
@@ -163,4 +163,3 @@ MEDIA_URL = '/media/'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-django_heroku.settings(locals())
